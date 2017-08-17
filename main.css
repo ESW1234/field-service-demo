@@ -261,7 +261,7 @@ body {
 
 .game-of-thrones-text {
 	position: absolute;
-	width: 400px;
+	width: 500px;
 	font-size: 3.5rem;
 	font-weight: 800;
 	color: #fff;
@@ -429,7 +429,7 @@ body {
 	.header-logo {
 		margin-right: 0;
 	}
-	
+
 	.featured-products {
 		padding: 20px;
 	}
@@ -502,5 +502,27 @@ body {
 		color: #fff;
 		border: 2px solid #fff;
 		z-index: 1;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.hero-content {
+		padding: 0 40px;
+	}
+
+	.hero-text {
+		font-size: 2.75rem;
+	}
+
+	.hero-search {
+		width: 250px;
+	}
+
+	.game-of-thrones-text {
+		font-size: 2rem;
+	}
+
+	.footer-logo {
+		display: none;
 	}
 }
