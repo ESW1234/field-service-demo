@@ -41,13 +41,12 @@ body {
 .header-item {
 	display: flex;
 	height: 100%;
-	padding: 0 20px;
-	margin-left: 20px;
+	padding: 0 14px;
 	font-size: 1.25rem;
 	color: #3b3b3b;
 	box-sizing: border-box;
 	transition: background-color 200ms ease-in-out;
-	cursor: pointer; 
+	cursor: pointer;
 	line-height: 90px;
 }
 
