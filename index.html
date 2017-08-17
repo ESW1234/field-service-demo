@@ -2,7 +2,11 @@
 <html>
 <head>
 	<title>Kabletown</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	
 	<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
@@ -28,7 +32,7 @@
 		<div class="hero-content">
 			<div class="hero-text">Keep up with the best shows out there.</div>
 			<div class="hero-buttons">
-				<button class="hero-button">Let's Try It</button>
+				<button class="hero-button" id="login">Let's Try It</button>
 			</div>
 		</div>
 	</div>
@@ -99,5 +103,46 @@
 			<a class="footer-column-link">Jobs</a>
 		</div>
 	</div>
+
+	<script type='text/javascript' src='https://service.force.com/embeddedservice/3.0/esw.min.js'></script>
+	<script type='text/javascript'>
+		var initESW = function(gslbBaseURL) {
+			embedded_svc.settings.displayHelpButton = true; //Or false
+			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+			//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+			//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+			// Settings for Field Service
+			embedded_svc.settings.fieldServiceHomeImgURL = '';
+			embedded_svc.settings.fieldServiceLogoImgURL = '';
+			embedded_svc.settings.fieldServiceConfirmationCardImgURL = '';
+			embedded_svc.settings.loginClientId = '3MVG9SemV5D80oBfokpnjkMEio8qKFQZ9phE.ANrbVIOPgegiSdK7x8ibW7Lvci5YGkq.J4elRA7fmzeGEInr';
+			embedded_svc.settings.loginRedirectURL = 'https://esw1234.github.io/field-service-demo/callback.html';
+			embedded_svc.settings.loginTargetQuerySelector = '#login';
+			embedded_svc.settings.fieldServiceStartLabel = "Let's Try It";
+			embedded_svc.settings.enabledFeatures = ['FieldService'];
+			embedded_svc.settings.entryFeature = 'FieldService';
+			embedded_svc.init(
+				'https://urigs0-15de82fa4eb.my.salesforce.com', 
+				'https://pressuresystems-15de82fa4ec.force.com/SelfService', 
+				gslbBaseURL,
+				'00DB00000005FOU',
+				'Snap_insFSDemo',
+				{}
+			); 
+		};
+		if (!window.embedded_svc) { 
+			var s = document.createElement('script'); 
+
+			s.setAttribute('src', 'https://urigs0-15de82fa4eb.my.salesforce.com/embeddedservice/3.0/esw.min.js'); 
+			s.onload = function() { 
+				initESW(null); 
+			}; 
+			document.body.appendChild(s); 
+		} else { 
+			initESW('https://urigs0-15de82fa4eb.my.salesforce.com'); 
+		}
+	</script>
 </body>
 </html>
