@@ -32,7 +32,7 @@
 			<div class="hero-content">
 				<div class="hero-text">Keep up with the best shows out there.</div>
 				<div class="hero-buttons">
-					<button class="hero-button" id="login">Let's Try It</button>
+					<div id="login">Let's Try It</div>
 				</div>
 			</div>
 		</div>
@@ -122,7 +122,7 @@
 
 				embedded_svc.settings.loginClientId = "3MVG9SemV5D80oBfokpnjkMEio8qKFQZ9phE.ANrbVIOPgegiSdK7x8ibW7Lvci5YGkq.J4elRA7fmzeGEInr";
 				embedded_svc.settings.loginRedirectURL = "https://esw1234.github.io/field-service-demo/callback.html";
-				embedded_svc.settings.loginTargetQuerySelector = "#login-hidden";
+				embedded_svc.settings.loginTargetQuerySelector = "#login";
 				embedded_svc.settings.fieldServiceStartLabel = "Let's Try It";
 
 				embedded_svc.settings.enabledFeatures = ["FieldService"];
@@ -148,6 +148,5 @@
 				initESW("https://urigs0-15de82fa4eb.my.salesforce.com"); 
 			}
 		</script>
-		<script type="text/javascript" src="activate.js"/>
 	</body>
 </html>

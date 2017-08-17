@@ -127,7 +127,7 @@ body {
 	max-width: 800px;
 }
 
-.hero-button {
+.sfid-button {
 	display: inline-block;
 	border: 2px solid #fff;
 	color: #fff;
@@ -144,7 +144,7 @@ body {
 	cursor: pointer;
 }
 
-.hero-button:hover {
+.sfid-button:hover {
 	background-color: #fff;
 	color: #935fdb;
 }
@@ -405,10 +405,6 @@ body {
 	margin: 5px 0;
 	cursor: pointer;
 	text-decoration: none;
-}
-
-#login-hidden {
-	display: none;
 }
 
 @media screen and (max-width: 768px) {
