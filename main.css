@@ -35,6 +35,7 @@ body {
 	min-width: 100px;
 	height: 100%;
 	margin-right: 50px;
+	cursor: pointer;
 }
 
 .header-item {
@@ -46,6 +47,12 @@ body {
 	align-items: center;
 	color: #3b3b3b;
 	box-sizing: border-box;
+	transition: background-color 200ms ease-in-out;
+	cursor: pointer;
+}
+
+.header-item:hover {
+	background-color: #f0f0f0;
 }
 
 .header-item.active {
@@ -64,32 +71,45 @@ body {
 .hero {
 	position: relative;
 	background-color: #8c55d9;
-	height: 500px;
 	width: 100%;
+	padding: 154px 0 100px;
 	z-index: 0;
 }
 
-.hero-search {
+.hero-search-container {
 	position: absolute;
 	left: 50%;
 	top: 30px;
 	transform: translate(-50%, 0);
 	width: 550px;
-	height: 55px;
+	height: 54px;
 	background-color: #fff;
 	border-radius: 4px;
 }
 
-.hero-search::before {
-	content: "";
+.hero-search {
+	width: 100%;
+	height: 100%;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	font-size: 2rem;
+	font-family: "Salesforce Sans", sans-serif;
+	padding: 0 15px 0 50px;
+	box-sizing: border-box;
+}
+
+.hero-search:focus,
+.hero-search:active {
+	outline: none;
+}
+
+.hero-search-icon {
 	position: absolute;
-	left: 10px;
-	top: calc(50% - 16px);
+	fill: #888;
 	width: 32px;
-	height: 32px;
-	background-image: url("images/spyglass.png");
-	background-size: cover;
-	background-position: center;
+	left: 10px;
+	top: 9px;
 }
 
 .hero-content {
@@ -97,7 +117,6 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	padding: 0 80px;
-	top: 160px;
 	box-sizing: border-box;
 }
 
@@ -117,6 +136,17 @@ body {
 	border-radius: 40px;
 	line-height: 30px;
 	margin-top: 50px;
+	background-color: transparent;
+	font-size: 1.25rem;
+	font-family: "Salesforce Sans", sans-serif;
+	box-sizing: content-box;
+	transition: background-color 200ms ease-in, color 200ms ease-in;
+	cursor: pointer;
+}
+
+.hero-button:hover {
+	background-color: #fff;
+	color: #935fdb;
 }
 
 .featured-products {
@@ -152,9 +182,11 @@ body {
 }
 
 .featured-products-item-text {
+	display: block;
 	margin-top: 20px;
 	text-align: center;
 	color: #935fdb;
+	cursor: pointer;
 }
 
 .featured-products-carousel-dots {
@@ -313,6 +345,16 @@ body {
 	line-height: 30px;
 	display: inline-block;
 	margin: 20px 0 0 20px;
+	transition: opacity 200ms ease-in;
+	cursor: pointer;
+	font-family: "Salesforce Sans", sans-serif;
+	font-size: 1rem;
+	box-sizing: content-box;
+	border: none;
+}
+
+.share-item-action:hover {
+	opacity: 0.8;
 }
 
 .map-image {
@@ -361,6 +403,8 @@ body {
 .footer-column-link {
 	color: #373737;
 	margin: 5px 0;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -382,12 +426,8 @@ body {
 		display: block;
 	}
 
-	.hero-search {
+	.hero-search-container {
 		width: 300px;
-	}
-
-	.hero-content {
-		top: 120px;
 	}
 
 	.hero-text {
@@ -514,7 +554,7 @@ body {
 		font-size: 2.75rem;
 	}
 
-	.hero-search {
+	.hero-search-container {
 		width: 250px;
 	}
 
