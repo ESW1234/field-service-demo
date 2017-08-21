@@ -28,13 +28,13 @@ body {
 }
 
 .header-logo {
-	background-image: url("images/logo.png");
+	background-image: url("images/kabletown-logo.png");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	min-width: 100px;
+	min-width: 140px;
 	height: 100%;
-	margin-right: 50px;
+	margin-right: 40px;
 	cursor: pointer;
 }
 
@@ -396,6 +396,7 @@ body {
 	background-position: top center;
 	background-repeat: no-repeat;
 	margin-right: 80px;
+	display: none;
 }
 
 .footer-column {
@@ -432,8 +433,7 @@ body {
 	}
 
 	.header-logo {
-		min-width: 80px;
-		margin-left: 10px;
+		margin-left: 70px;
 	}
 
 	.header-item {
@@ -485,7 +485,11 @@ body {
 
 @media screen and (max-width: 1024px) {
 	.header-logo {
-		margin-right: 0;
+		margin-right: 35px;
+	}
+
+	.header-item {
+		font-size: 1rem;
 	}
 
 	.featured-products {
@@ -502,6 +506,10 @@ body {
 
 	.share {
 		padding: 20px 20px 0;
+	}
+
+	.footer {
+		padding: 0 20px;
 	}
 
 	.share-title {
